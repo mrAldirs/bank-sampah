@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/bg_rounded_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:navigationIcon="@drawable/ic_back">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="Detail Riwayat Anda"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginVertical="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnBayar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pengguna" />
+
+                <EditText
+                    android:id="@+id/detailNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Kategori" />
+
+                <EditText
+                    android:id="@+id/detailKategori"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berat (Kg)" />
+
+                    <EditText
+                        android:id="@+id/detailBerat"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:enabled="false"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="Harga (per Kg)" />
+
+                    <EditText
+                        android:id="@+id/detailHarga"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="20dp"
+                        android:enabled="false"
+                        android:textColor="@color/black" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tanggal Penjemputan" />
+
+                <EditText
+                    android:id="@+id/detailTanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Alamat Penjemputan" />
+
+                <EditText
+                    android:id="@+id/detailAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Catatan Tambahan" />
+
+                <EditText
+                    android:id="@+id/detailCatatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/detailBayar"
+                        android:layout_width="100dp"
+                        android:layout_height="120dp"
+                        android:src="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detailStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sudah Bayar" />
+
+                        <Button
+                            android:id="@+id/btnEdit"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginTop="12dp"
+                            android:backgroundTint="@color/purple_200"
+                            android:drawableLeft="@drawable/edit"
+                            android:drawableTint="@color/white"
+                            android:text="Edit Detail" />
+
+                        <Button
+                            android:id="@+id/btnLokasi"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:backgroundTint="@color/teal_200"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:drawableTint="@color/white"
+                            android:text="Lihat Lokasi" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBayar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="30dp"
+        android:text="Bayar Penjemputan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.MaterialComponents"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="50dp"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:rippleColor="@color/white"
+        tools:layout_editor_absoluteX="30dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

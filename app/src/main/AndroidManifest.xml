@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bank_sampah"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value=
+                "@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDmcXgQN8gm5zhAnryw0ntBsORQXXsf260" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InputDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RiwayatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity android:name=".QrActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".JenisSampahActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".IklanActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".DokumentasiSampahActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FontActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
